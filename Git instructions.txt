@@ -1,0 +1,62 @@
+///////////////////////////////////////////
+To put a new project on Guithub:
+///////////////////////////////////////////
+
+● npx create-react-app somename
+● code .
+● npm start (to check if it works)
+● ctrl+C to stop it
+● add these to package.json:
+        ● "homepage":"https://aditya31sharma.github.io/nameofrepository
+        ● under scripts section:
+            "predeploy":"npm run build",
+            "deploy":"gh-pages -d build",
+● git init
+● git remote add origin url_of_the_blank_repository_made_on_github
+● git status (modified: package.json)
+● git add .
+● git commit -m "initial commit"
+● git push origin master
+
+---------------------------------------------
+---------------------------------------------
+
+
+
+///////////////////////////////////////////
+To further put it on github pages: 
+///////////////////////////////////////////
+
+● npm install --save gh-pages
+● npm run deploy
+● package.json and package-lock.json would probably be modified,so add,commit and push them to the master branch
+
+---------------------------------------------
+---------------------------------------------
+
+
+/////////////////////////////////////////////////////////////////
+IF YOU CHANGE SOMETHING IN THE PROJECT AND IT WAS ON GH-PAGES: 
+/////////////////////////////////////////////////////////////////
+● git pull (while in the master branch)
+● open .gitignore and package.json files
+● git checkout gh-pages
+● copy paste content of .gitignore and package.json(of master branch) and make new .gitignore and package.json in the gh-pages branch.
+● git add .
+● git commit -m "Adding .gitignore and package.json"
+● git push origin gh-pages
+
+MAKE ANY CHANGES YOU WANT 
+
+● git status
+● git add .
+● git commit -m "Done changes"
+● git push origin master 
+● You'll probbaly get an error so: git pull (try both branches)
+● git push origin master
+● npm run deploy
+● Go back to Github and refresh the rep page and visit the gh page again.
+● The changes should be there by then.
+
+------------------------------------------------------------------
+------------------------------------------------------------------
